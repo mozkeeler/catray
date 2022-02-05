@@ -1,0 +1,31 @@
+{
+  "description": "turns everyone (on twitter) into cats",
+  "manifest_version": 2,
+  "name": "catray",
+  "version": "1.0",
+  "homepage_url": "https://github.com/mozkeeler/catray",
+  "icons": {
+    "48": "icon.jpg"
+  },
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://pbs.twimg.com/*",
+    "https://twitter.com/*"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "57.0a1"
+    }
+  },
+
+  "web_accessible_resources": [
+    "cats/*.jpg"
+  ]
+}
